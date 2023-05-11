@@ -1,5 +1,5 @@
 {
-    "name": "NatsunekoLaboratory.ErrorTracker",
+    "name": "NatsunekoLaboratory.TraceMate",
     "references": [],
     "includePlatforms": [
         "Editor"

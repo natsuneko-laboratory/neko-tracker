@@ -41,7 +41,7 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 
-namespace NatsunekoLaboratory.ErrorTracker.Serializer
+namespace NatsunekoLaboratory.TraceMate.Serializer
 {
     public enum JsonNodeType
     {
@@ -680,7 +680,7 @@ namespace NatsunekoLaboratory.ErrorTracker.Serializer
                                         string s = aJSON.Substring(i + 1, 4);
                                         Token.Append((char)int.Parse(
                                             s,
-                                            System.Globalization.NumberStyles.AllowHexSpecifier));
+                                            NumberStyles.AllowHexSpecifier));
                                         i += 4;
                                         break;
                                     }
@@ -1257,7 +1257,7 @@ namespace NatsunekoLaboratory.ErrorTracker.Serializer
 
         public override bool Equals(object obj)
         {
-            if (object.ReferenceEquals(this, obj))
+            if (ReferenceEquals(this, obj))
                 return true;
             return (obj is JsonNull);
         }
@@ -1328,7 +1328,7 @@ namespace NatsunekoLaboratory.ErrorTracker.Serializer
         {
             if (b == null)
                 return true;
-            return System.Object.ReferenceEquals(a, b);
+            return ReferenceEquals(a, b);
         }
 
         public static bool operator !=(JsonLazyCreator a, object b)
@@ -1340,7 +1340,7 @@ namespace NatsunekoLaboratory.ErrorTracker.Serializer
         {
             if (obj == null)
                 return true;
-            return System.Object.ReferenceEquals(this, obj);
+            return ReferenceEquals(this, obj);
         }
 
         public override int GetHashCode()
